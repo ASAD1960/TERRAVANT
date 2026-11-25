@@ -1,0 +1,49 @@
+# Version control and editor metadata
+.git
+.github
+.vscode
+.idea
+
+# Environment files and secrets
+.env
+.env.*
+**/.env
+**/.env.*
+
+# Python environments, caches and bytecode
+**/.venv
+**/venv
+**/__pycache__
+**/*.py[cod]
+**/.pytest_cache
+**/.ruff_cache
+**/.mypy_cache
+**/.tox
+
+# Node dependencies and generated output
+**/node_modules
+**/dist
+**/coverage
+
+# Local databases and runtime uploads
+**/*.db
+**/*.sqlite
+**/*.sqlite3
+backend/storage
+**/storage
+
+# Local backups and repository metadata
+backups.gitignore
+
+# Datasets and unrelated project material
+datasets
+frontend
+docs
+scripts
+infrastructure
+tests
+
+# Temporary and operating-system files
+*.log
+.DS_Store
+Thumbs.db

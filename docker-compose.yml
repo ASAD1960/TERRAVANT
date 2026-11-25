@@ -1,0 +1,34 @@
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-terravant}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-terravant}
+      POSTGRES_DB: ${POSTGRES_DB:-terravant}
+    volumes: [pgdata:/var/lib/postgresql/data]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-terravant}"]
+      interval: 5s
+      retries: 10
+
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+      args: { WITH_DL: "false" }   # set "true" to include PyTorch for disease detection
+    env_file: .env
+    environment:
+      DATABASE_URL: postgresql+psycopg2://${POSTGRES_USER:-terravant}:${POSTGRES_PASSWORD:-terravant}@db:5432/${POSTGRES_DB:-terravant}
+    depends_on:
+      db: { condition: service_healthy }
+    volumes: [uploads:/srv/storage/uploads]
+    ports: ["8000:8000"]
+
+  frontend:
+    build: { context: ./frontend }
+    depends_on: [backend]
+    ports: ["8080:80"]
+
+volumes:
+  pgdata:
+  uploads:

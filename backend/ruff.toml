@@ -1,0 +1,5 @@
+line-length = 140
+target-version = "py312"
+[lint]
+select = ["E", "F", "I", "B"]
+ignore = ["B008", "E501", "B904"]  # B008: FastAPI Depends(); E501: formatter-managed; B904: HTTPException chaining not needed

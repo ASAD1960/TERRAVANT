@@ -1,0 +1,201 @@
+{
+  "version": "0.1.0",
+  "model_type": "RandomForestClassifier",
+  "data_source": "synthetic-demo",
+  "feature_order": [
+    "nitrogen",
+    "phosphorus",
+    "potassium",
+    "temperature",
+    "humidity",
+    "ph",
+    "rainfall"
+  ],
+  "metrics": {
+    "accuracy": 0.9027777777777778,
+    "f1_macro": 0.9025016504107545,
+    "cv_f1_macro": {
+      "decision_tree": 0.8230174013893217,
+      "random_forest": 0.8968480863343693,
+      "gradient_boosting": 0.8962064800486667
+    },
+    "selected_model": "random_forest",
+    "n_train": 2880,
+    "n_test": 720,
+    "confusion_matrix": [
+      [
+        79,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        74,
+        5,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        5,
+        69,
+        2,
+        0,
+        0,
+        0,
+        2,
+        2
+      ],
+      [
+        1,
+        0,
+        1,
+        55,
+        0,
+        0,
+        0,
+        4,
+        19
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        79,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        0,
+        0,
+        78,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        78,
+        1,
+        0
+      ],
+      [
+        2,
+        0,
+        2,
+        4,
+        0,
+        0,
+        0,
+        69,
+        3
+      ],
+      [
+        0,
+        0,
+        0,
+        9,
+        0,
+        0,
+        0,
+        2,
+        69
+      ]
+    ],
+    "labels": [
+      "chickpea",
+      "cotton",
+      "maize",
+      "mustard",
+      "potato",
+      "rice",
+      "sugarcane",
+      "sunflower",
+      "wheat"
+    ],
+    "per_class_f1": {
+      "chickpea": 0.9753086419753086,
+      "cotton": 0.925,
+      "maize": 0.8734177215189873,
+      "mustard": 0.7333333333333333,
+      "potato": 0.9937106918238994,
+      "rice": 0.975,
+      "sugarcane": 0.9811320754716981,
+      "sunflower": 0.8679245283018868,
+      "wheat": 0.7976878612716763
+    }
+  },
+  "feature_importances": {
+    "nitrogen": 0.13669408725541002,
+    "phosphorus": 0.051572978776875326,
+    "potassium": 0.2626130263181499,
+    "temperature": 0.14105694200939137,
+    "humidity": 0.13452597167714553,
+    "ph": 0.10518498857994889,
+    "rainfall": 0.16835200538307896
+  },
+  "feature_medians": {
+    "nitrogen": 79.70240273062447,
+    "phosphorus": 49.30271415926669,
+    "potassium": 45.81183278145858,
+    "temperature": 22.72153864532602,
+    "humidity": 65.83981609222852,
+    "ph": 6.835519665216189,
+    "rainfall": 78.59967025507271
+  },
+  "feature_ranges": {
+    "nitrogen": [
+      0.0,
+      171.2711129702648
+    ],
+    "phosphorus": [
+      8.006338284614245,
+      96.89024024612448
+    ],
+    "potassium": [
+      0.0,
+      164.78907899770184
+    ],
+    "temperature": [
+      7.981496700691187,
+      34.5898190399613
+    ],
+    "humidity": [
+      13.222273178358144,
+      100.0
+    ],
+    "ph": [
+      4.766079565587739,
+      8.564306036543377
+    ],
+    "rainfall": [
+      0.0,
+      345.9863749826789
+    ]
+  },
+  "regional_validation": "NOT DONE \u2014 required before presenting as locally reliable (SDD 8.1)",
+  "trained_at": "2026-11-19T08:06:17.556629+00:00",
+  "sklearn_version": "1.9.1",
+  "python_version": "3.12.3"
+}

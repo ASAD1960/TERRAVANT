@@ -1,0 +1,35 @@
+{
+  "version": "0.1.0",
+  "model_type": "RandomForestRegressor",
+  "data_source": "synthetic-demo",
+  "feature_order": [
+    "crop_idx",
+    "rainfall",
+    "temperature",
+    "irrigated",
+    "fertilizer_kg_ha",
+    "soil_ph"
+  ],
+  "crops": [
+    "wheat",
+    "rice",
+    "maize",
+    "cotton",
+    "sugarcane",
+    "mustard",
+    "chickpea",
+    "potato",
+    "sunflower"
+  ],
+  "metrics": {
+    "mae": 0.7419989331725794,
+    "rmse": 1.7928845188933047,
+    "r2": 0.9883342920340987,
+    "n_train": 4800,
+    "n_test": 1200
+  },
+  "interval": "tree-ensemble spread (uncalibrated)",
+  "trained_at": "2026-11-19T08:06:21.824176+00:00",
+  "sklearn_version": "1.9.1",
+  "python_version": "3.12.3"
+}

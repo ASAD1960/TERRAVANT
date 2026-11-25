@@ -1,0 +1,34 @@
+__pycache__/
+*.pyc
+.env
+*.db
+.pytest_cache/
+.ruff_cache/
+node_modules/
+dist/
+backend/storage/
+datasets/raw/*
+datasets/processed/*
+datasets/external/*
+!datasets/**/.gitkeep
+ml/artifacts/*/model.pt
+.DS_Store
+
+# Local and sensitive files
+.env.*
+!.env.example
+backups/
+test_images/
+.venv/
+venv/
+coverage/
+
+# Temporary source backups
+*.bak
+*.before-*
+*.tmp
+*.log
+
+# Frontend backup copies
+*.backup
+*-backup
